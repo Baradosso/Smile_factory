@@ -21,6 +21,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .bg_image {
@@ -37,6 +38,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    min-height: 10vh;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     white-space: nowrap;
@@ -106,6 +108,7 @@ nav h1 {
 footer {
     position: relative;
     bottom: 0;
+    min-height: 10vh;
     padding-top: 1rem;
     padding-bottom: 4rem;
     padding-left: var(--padding_glowny);
@@ -179,19 +182,18 @@ hr {
 /* Regulamin PODSTRONA */
 h4 {
     position: relative;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 500;
     color: var(--bialy);
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .reg_page {
-    text-align: center;
     position: relative;
-    min-height: 100%;
+    min-height: 80vh;
     background: var(--jasny_szary);
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: var(--padding_glowny);
     padding-top: 8rem;
     padding-bottom: 4rem;
@@ -209,17 +211,26 @@ h4 {
 /* /Regulamin PODSTRONA */
 
 /* FAQ PODSTRONA */
+.bullet {
+    display: flex;
+}
+
+.bullet_point{
+    margin-right: 0.5em;
+}
+
 h3 {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
     color: var(--bialy);
     margin-bottom: 0.5em;
 }
 
-.reg_page ul li p, .reg_page ul li{
+
+.reg_page ul li p {
     text-align: left;
-    margin-left: 0;
+    margin-left: 2.5em;
 }
 
 .reg_page ul li p a{
@@ -299,6 +310,74 @@ h3 {
 }
 /* /log PODSTRONA */
 
+/* services PODSTRONA */
+.about_us_page {
+    position: relative;
+    min-height: 80vh;
+    background: var(--jasny_szary);
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 14vh;
+    padding-bottom: 4rem;
+}
+
+.about_us_container {
+    margin-left: var(--padding_glowny);
+    margin-right: var(--padding_glowny);
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--bialy);
+    white-space: nowrap;
+    margin-top: 0;
+}
+
+.about_us {
+    position: relative;
+    display: flex;
+}
+
+    .about_us img {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+        margin-right: 1.5rem;
+        border: 0.3rem solid;
+        border-image-slice: 1;
+        border-image-source: var(--gradient);
+        left: 0;
+        float: left;
+    }
+
+    .about_us p {
+        position: relative;
+        left: 0;
+        color: var(--bialy);
+        font-size: 1.5rem;
+        line-height: 1.2em;
+    }
+/* /services PODSTRONA */
+
+/* calendar PODSTRONA */
+
+.calendar_page {
+    position: relative;
+    min-height: 80vh;
+    background: var(--jasny_szary);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 14vh;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* /calendar PODSTRONA */
 /*---------------------------90em--------------------------------------*/
 @media screen and (max-width: 90em) {
     /* Footer */
@@ -383,7 +462,7 @@ h3 {
 
     /* Regulamin PODSTRONA */
     h4 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
         .reg_page p {
@@ -411,7 +490,7 @@ h3 {
 
     /* Regulamin PODSTRONA */
     h4 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
         .reg_page p {
@@ -519,6 +598,7 @@ h3 {
     .contact_inf {
         font-size: 0.6rem;
         margin-top: 0.5em;
+        margin-right: 0;
     }
 
     .copyright {

@@ -5,7 +5,7 @@
 <section class="page">
     <section class="unia">
         <div class="unia_images">
-            <img src="photos\unia\image1.png" />
+            <img src="photos\unia\image1.PNG" />
             <img src="photos\unia\image2.png" />
             <img src="photos\unia\image3.png" />
             <img src="photos\unia\image4.png" />
@@ -45,7 +45,7 @@
         <div class="about_us_container">
             <h2>Coś o nas:</h2>
             <div class="about_us">
-                <img src="photos\about_us\about_us.jpg"/>
+                <img src="photos\about_us\about_us.JPG"/>
                 <p>
                     Smile Factory jest małą firmą zajmującą się przynoszeniem uśmiechu naszym klientom. Robimy to poprzez szeroki zakres usług na imprezach okolicznościowych takich jak:
                     <br />- Oprawa Muzyczno-Konferansjerska,
@@ -63,16 +63,16 @@
             <div class="service_buttons">
                 <div class="button_border">
                     <?php
-                        echo    '<a href="Uslugi.php?status=1" class="button_services">
+                        echo    '<a href="services.php?status=1" class="button_services">
                                     <h6>Oprawa Muzyczno-Konferansjerska</h6>
-                                    <img src="photos\services\image1.jpg" />
+                                    <img src="photos\services\image1.JPG" />
                                 </a>';
                     ?>
                 </div>
 
                 <div class="button_border">
                     <?php
-                        echo    '<a href="Uslugi.php?status=2" class="button_services">
+                        echo    '<a href="services.php?status=2" class="button_services">
                                     <h6>Nagłośnienie i Oświetlenie</h6>
                                     <img src="photos\services\image2.jpg" />
                                 </a>';
@@ -82,7 +82,7 @@
             <div class="service_buttons">
                 <div class="button_border">
                     <?php
-                        echo    '<a href="Uslugi.php?status=3" class="button_services">
+                        echo    '<a href="services.php?status=3" class="button_services">
                                     <h6>Wynajem Namiotów</h6>
                                     <img src="photos\services\image3.jpg" />
                                 </a>';
@@ -91,7 +91,7 @@
 
                 <div class="button_border">
                    <?php
-                        echo    '<a href="Uslugi.php?status=4" class="button_services">
+                        echo    '<a href="services.php?status=4" class="button_services">
                                     <h6>Fotobudka i fotolustro</h6>
                                     <img src="photos\services\image4.jpg" />
                                 </a>';

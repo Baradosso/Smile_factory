@@ -1,5 +1,9 @@
 <?php
     include_once 'pod_menu.php';
+
+    if (isset($_SESSION["userid"])) {
+        header("location: index.php");
+    }
 ?>
 
 <section class="page">

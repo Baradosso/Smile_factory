@@ -115,7 +115,129 @@ function loginUser($conn, $username, $pwd){
 		$_SESSION["userid"] = $uidExists["usersId"];
 		$_SESSION["useruid"] = $uidExists["usersUid"];
 		$_SESSION["userpos"] = $uidExists["usersPos"];
-		header("location: ../index.php");
+		$_SESSION["username"] = $uidExists["usersName"];
+		$_SESSION["usersecondname"] = $uidExists["usersSecondName"];
+		$_SESSION["useremail"] = $uidExists["usersEmail"];
+		$_SESSION["userphone"] = $uidExists["usersPhoneNumber"];
+		header("location: ../profile.php");
 		exit();
 	}
+}
+
+function changePassword($conn, $pwd, $npwd, $rnpwd, $userid){
+
+	$sql = "SELECT usersPwd FROM users WHERE usersId=?";
+	$stmt = mysqli_stmt_init($conn);
+
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	mysqli_stmt_bind_param($stmt, "s", $userid);
+	mysqli_stmt_execute($stmt);
+
+	$resultData = mysqli_stmt_get_result($stmt);
+
+	if($row = mysqli_fetch_assoc($resultData)){
+	}
+	else{
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	mysqli_stmt_close($stmt);
+	if($uidExists === false){
+		header("location: ../profile.php?error=wronglogin");
+		exit();
+	}
+
+	$pwdHashed = $row["usersPwd"];
+	$checkPwd = password_verify($pwd, $pwdHashed);
+
+	$pattern = '/^(?=.*[\W|\D])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
+
+	if($checkPwd === false){
+		header("location: ../profile.php?error=wrongpwd");
+		exit();
+	}
+	else if($checkPwd === true){
+		if(pwdMatch($npwd, $rnpwd)){
+			header("location: ../profile.php?error=passwordsdontmatch");
+			exit();
+		}
+		else if(preg_match($pattern, $npwd) == 0){
+			header("location: ../profile.php?error=nospecialcharacters");
+			exit();
+		}
+	}
+
+	updateDbPwd($conn, $npwd, $userid);
+}
+
+function updateDbName($conn, $name, $userid){
+	$sql = "UPDATE users SET usersName=? WHERE usersId=?;";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	mysqli_stmt_bind_param($stmt, "ss", $name, $userid);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
+}
+
+function updateDbSecondName($conn, $secondname, $userid){
+	$sql = "UPDATE users SET usersSecondName=? WHERE usersId=?;";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	mysqli_stmt_bind_param($stmt, "ss", $secondname, $userid);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
+}
+
+function updateDbEmail($conn, $email, $userid){
+	$sql = "UPDATE users SET usersEmail=? WHERE usersId=?;";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	mysqli_stmt_bind_param($stmt, "ss", $email, $userid);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
+}
+
+function updateDbPhone($conn, $phone, $userid){
+	$sql = "UPDATE users SET usersPhoneNumber=? WHERE usersId=?;";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	mysqli_stmt_bind_param($stmt, "ss", $phone, $userid);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
+}
+
+function updateDbPwd($conn, $npwd, $userid){
+	$sql = "UPDATE users SET usersPwd=? WHERE usersId=?;";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)){
+		header("location: ../profile.php?error=stmtfailed");
+		exit();
+	}
+
+	$hashedPwd = password_hash($npwd, PASSWORD_DEFAULT);
+
+	mysqli_stmt_bind_param($stmt, "ss", $hashedPwd, $userid);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
 }

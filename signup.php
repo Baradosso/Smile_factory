@@ -1,7 +1,7 @@
 <?php
-    include_once 'pod_menu.php';
-    
-    if((!isset($_SESSION["userpos"]) && $_SESSION["userpos"] !== "admin")){
+    include_once 'profile_menu.php';
+
+    if($_SESSION["userpos"] !== "admin"){
         header("location: index.php");
     }
 ?>
@@ -9,7 +9,6 @@
 <section class="page">
     <div class="sig_page">
 
-        <section class="signup-form">
 
             <h4>Zarejestruj użytkownika</h4>
 
@@ -32,7 +31,7 @@
                 
                 <label for="pwdrepeat">Powtórz hasło:</label>
                 <input type="password" name="pwdrepeat" placeholder="Powtórz hasło" >
-       
+
                 <?php
                     if(isset($_GET["error"])){
                         if($_GET["error"] == "emptyinput"){
@@ -54,17 +53,27 @@
                             echo "<p>BŁĄD! Nazwa firmy już istnieje w bazie!</p>";
                         }
                         else if($_GET["error"] == "none"){
-                            echo "<p>BŁĄD! Poprawnie zarejestrowano użytkownika!</p>";
+                            echo "<p>Poprawnie zarejestrowano użytkownika!</p>";
                         }
                     }
                 ?>
 
-                <button type="submit" name="submit">Zarejestruj użytkownika</button>      
+                <button type="submit" name="submit">Zarejestruj użytkownika</button>    
+                
+                <label for="generatedPwd">Wygeneruj hasło:</label>
+                <input type="text" id="generatedPwd" placeholder="Generowane hasło" >
+
+                <div class="generate">
+                    <button id="pwdGen">Generuj hasło</button>      
+                    <button id="pwdCopy">Kopiuj hasło</button>      
+                </div>
+
             </form>
-        </section>
     </div>
 </section>
 
 <?php
-    include_once 'pod_footer.php';
+    include_once 'profile_footer.php';
 ?>
+
+<script src="js/generator.js"></script>
