@@ -2,7 +2,7 @@
 
 require_once '../../Functions/includes/dbh.inc.php';
 
-$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1024 AS filesSize FROM files ORDER BY filesComment";
+$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1048576 AS filesSize FROM files ORDER BY filesComment";
 $resultData = mysqli_query($conn, $sql);
 $inc = 0;
 

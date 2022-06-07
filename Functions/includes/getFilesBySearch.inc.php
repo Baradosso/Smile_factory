@@ -7,13 +7,13 @@ $order = $_GET["order_by"];
 
 switch($order){
 	case "0":
-		$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1024 AS filesSize FROM files WHERE filesName LIKE ? OR filesComment LIKE ? OR filesCreateDate LIKE ? ORDER BY filesName";
+		$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1048576 AS filesSize FROM files WHERE filesName LIKE ? OR filesComment LIKE ? OR filesCreateDate LIKE ? ORDER BY filesName";
 		break;
 	case "1":
-		$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1024 AS filesSize FROM files WHERE filesName LIKE ? OR filesComment LIKE ? OR filesCreateDate LIKE ? ORDER BY filesComment";
+		$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1048576 AS filesSize FROM files WHERE filesName LIKE ? OR filesComment LIKE ? OR filesCreateDate LIKE ? ORDER BY filesComment";
 		break;
 	case "2":
-		$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1024 AS filesSize FROM files WHERE filesName LIKE ? OR filesComment LIKE ? OR filesCreateDate LIKE ? ORDER BY filesCreateDate";
+		$sql = "SELECT filesName, filesComment, filesCreateDate, filesSize/1048576 AS filesSize FROM files WHERE filesName LIKE ? OR filesComment LIKE ? OR filesCreateDate LIKE ? ORDER BY filesCreateDate";
 		break;
 }
 
