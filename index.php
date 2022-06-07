@@ -5,7 +5,7 @@
 <section class="page">
     <section class="unia">
         <div class="unia_images">
-            <img src="./Functions/photos/unia/image1.PNG" />
+            <img src="./Functions/photos/unia/image1.png" />
             <img src="./Functions/photos/unia/image2.png" />
             <img src="./Functions/photos/unia/image3.png" />
             <img src="./Functions/photos/unia/image4.png" />
@@ -22,7 +22,7 @@
         <div id="slideshow" data-component="slideshow">
             <div role="list">
                 <div class="slide">
-                    <img src="./Functions/photos/slider/image1.jpg" class="slide_img">
+                    <img src="./Functions/photos/slider/image1.JPG" class="slide_img">
                 </div>
                 <div class="slide">
                     <img src="./Functions/photos/slider/image2.jpg" class="slide_img">
@@ -72,7 +72,7 @@
 
                 <div class="button_border">
                     <?php
-                        echo    '<a href="./Uslugi/index.php?status=2" class="button_services">
+                        echo    '<a href="./Uslugi/?status=2" class="button_services">
                                     <h6>Nagłośnienie i Oświetlenie</h6>
                                     <img src="./Functions/photos/services/image2.jpg" />
                                 </a>';
@@ -82,7 +82,7 @@
             <div class="service_buttons">
                 <div class="button_border">
                     <?php
-                        echo    '<a href="./Uslugi/index.php?status=3" class="button_services">
+                        echo    '<a href="./Uslugi/?status=3" class="button_services">
                                     <h6>Wynajem Namiotów</h6>
                                     <img src="./Functions/photos/services/image3.jpg" />
                                 </a>';
@@ -91,7 +91,7 @@
 
                 <div class="button_border">
                    <?php
-                        echo    '<a href="./Uslugi/index.php?status=4" class="button_services">
+                        echo    '<a href="./Uslugi/?status=4" class="button_services">
                                     <h6>Fotobudka i fotolustro</h6>
                                     <img src="./Functions/photos/services/image4.jpg" />
                                 </a>';
@@ -104,10 +104,6 @@
             <div class="slideshow-container">
                 <h3>Zaufali nam:</h3>
                 <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <img src="./Functions/photos/trusted/image1.png" style="width:100%">
-                </div>
-
                 <div class="mySlides fade">
                     <img src="./Functions/photos/trusted/image2.png" style="width:100%">
                 </div>
