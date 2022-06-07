@@ -1,8 +1,0 @@
-<?php
-$serverName = "mariadb106.server021046.nazwa.pl";
-$dBUsername = "server021046_Strona";
-$dBPassword = "AdasCwel321";
-$dBName = "server021046_Smile";
-
-$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
-
