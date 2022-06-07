@@ -174,14 +174,14 @@ nav.sticky h1 {
 .logo_main {
     position: relative;
     display: flex;
-    width: 18%;
+    width: 17%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-top: 10%;
+    margin-top: 11%;
 }
 
 .logo_main::before {
@@ -472,6 +472,10 @@ footer {
     align-items: center;
 }
 
+.kontakt a{
+    text-decoration: none;
+}
+
 .kontakt img{
     height: 2.5rem;
     margin-right: 1.5rem;
@@ -490,6 +494,11 @@ footer {
     white-space: nowrap;
     opacity: 0.6;
 
+}
+
+#regulamin:hover{
+    opacity: 1;
+    transition: 0.6s;
 }
 /* /Kontakt */
 
@@ -567,14 +576,14 @@ hr {
         display: block;
     }
 
-        .burger div {
-            transition: 0.6s;
-        }
+    .burger div {
+        transition: 0.6s;
+    }
 
-        .burger:hover {
-            background-color: var(--bg_hover);
-            transition: 0.6s;
-        }
+    .burger:hover {
+        background-color: var(--bg_hover);
+        transition: 0.6s;
+    }
 
     nav {
         padding-top: 0.6rem;
@@ -588,15 +597,15 @@ hr {
         opacity: 0;
     }
 
-        .nav-links li a {
-            color: var(--bialy);
-            transition: 0.6s;
-        }
+    .nav-links li a {
+        color: var(--bialy);
+        transition: 0.6s;
+    }
 
-            .nav-links li a:hover {
-                background-color: var(--bg_hover);
-                transition: 0.6s;
-            }
+    .nav-links li a:hover {
+        background-color: var(--bg_hover);
+        transition: 0.6s;
+    }
 
     /* Logotyp */
     .logo_nav {
@@ -653,6 +662,11 @@ hr {
     .zaufali_nam {
         padding-top: 2rem;
         padding-bottom: 2rem;
+    }
+
+    .kontakt p {
+        font-size: 1.5rem;
+        margin-right: 0.5rem;
     }
 }
 /*---------------------------70em--------------------------------------*/
@@ -740,12 +754,12 @@ hr {
     }
 
     .kontakt p {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-right: 0.5rem;
     }         
     /* /Kontakt */
 
-    .copyright p{;
+    .copyright p{
         font-size: 0.8rem;
     }
     /* /Stopka */

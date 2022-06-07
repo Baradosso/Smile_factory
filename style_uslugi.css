@@ -1,0 +1,283 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ciemny_szary: rgb(10, 10, 10);
+    --sredni_szary: rgb(20, 20, 20);
+    --jasny_szary: rgb(30, 30, 30);
+    --bialy: rgb(245, 245, 245);
+    --bg_hover: rgb(60, 60, 60);
+    --padding_glowny: 10%;
+    --gradient: linear-gradient(to left, #d53a9d, #743ad5);
+    --gradient_hover: linear-gradient(to left, #db84ba, #9c7ad6);
+    --radius_uslugi: 1rem;
+}
+
+body {
+    background-color: var(--ciemny_szary);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    white-space: nowrap;
+    transition: 0.6s;
+    min-height: 8%;
+    z-index: 10000;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: var(--ciemny_szary);
+    box-shadow: 0 6px 15px -2px #fff;
+    white-space: nowrap;
+}
+
+    nav a:hover {
+        background-color: var(--bg_hover);
+        transition: 0.6s;
+    }
+
+    nav a {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(10, 10, 10);
+        font-size: 2em;
+        border-radius: 0.6em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        padding-left: 0.6em;
+        padding-right: 0.6em;
+        font-weight: 500;
+        color: var(--bialy);
+        transition: 0.6s;
+    }
+
+    /* Logotyp */
+    nav h1 {
+        margin-top: auto;
+        margin-bottom: auto;
+        letter-spacing: 0.02em;
+        font-size: 3rem;
+        color: var(--bialy);
+        font-weight: 500;
+    }
+
+.regulamin {
+    position: relative;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    background: var(--sredni_szary);
+    padding: 4rem;
+    padding-top: 10rem;
+    min-height: 80vh;
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--bialy);
+    margin-top: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--bialy);
+    margin-bottom: 2rem;
+}
+
+/* O nas */
+.o_nas_div {
+    position: relative;
+    margin-left: var(--padding_glowny);
+    margin-right: var(--padding_glowny);
+    margin-bottom: 6rem;
+    padding-top: 10rem;
+    min-height: 53vh;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--bialy);
+    white-space: nowrap;
+    margin-top: -1rem;
+}
+
+.o_nas {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 0;
+}
+
+.o_nas img {
+    width: 20rem;
+    height: 20rem;
+    margin-right: 1.5rem;
+    border: 0.3rem solid;
+    border-image-slice: 1;
+    border-image-source: var(--gradient);
+    float: left;
+    object-fit: cover;
+}
+
+.o_nas p {
+    color: var(--bialy);
+    font-size: 1.4em;
+}
+/* /O nas */
+
+/* Stopka */
+footer {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: var(--padding_glowny);
+    padding-right: var(--padding_glowny);
+    background-color: var(--sredni_szary);
+}
+
+/* Kontakt */
+.kontakt {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.kontakt a {
+    text-decoration: none;
+}
+
+.kontakt img {
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    opacity: 0.6;
+}
+
+.kontakt img:hover {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.kontakt p {
+    color: var(--bialy);
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    white-space: nowrap;
+    opacity: 0.6;
+}
+
+#regulamin:hover {
+    opacity: 1;
+    transition: 0.6s;
+}
+/* /Kontakt */
+
+hr {
+    opacity: 0.6;
+}
+
+.copyright {
+    color: var(--bialy);
+    opacity: 0.6;
+    white-space: nowrap;
+}
+/* /Stopka */
+
+
+@media screen and (max-width: 90em) {
+    nav h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .regulamin {
+        padding-top: 8rem;
+    }
+
+}
+
+@media screen and (max-width: 70em) {
+    .kontakt p {
+        font-size: 1.3rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 70em) {
+    .kontakt p {
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    nav h1 {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .regulamin {
+        padding-top: 8rem;
+    }
+
+    .o_nas p {
+        font-size: 0.9em;
+    }
+
+    /* Stopka */
+    /* Kontakt */
+    .kontakt img {
+        height: 1.6rem;
+        margin-right: 0.5rem;
+    }
+
+    .kontakt p {
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
+    /* /Kontakt */
+
+    .copyright p {
+        font-size: 0.8rem;
+    }
+    /* /Stopka */
+}
