@@ -2,7 +2,7 @@
 
 require_once '../../Functions/includes/dbh.inc.php';
 
-$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate FROM users WHERE usersPos='user' ORDER BY usersName";
+$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate FROM users WHERE usersPos='user' ORDER BY usersName";
 $resultData = mysqli_query($conn, $sql);
 $inc = 0;
 
@@ -29,11 +29,6 @@ while($row = mysqli_fetch_assoc($resultData)){
 				<td class='edit_user_td'>
 					<button value=".$row['usersUid']." onclick='manageUser(this.value)' class='edit_user_btn' title='Zarządzaj plikami użytkownika'>
 						<img src='../../Functions/photos/icons/files.png' class='edit_user_img'>
-					</button>
-				</td>
-				<td class='edit_user_td'>
-					<button value=".$row['usersUid']." onclick='deleteUser(this.value)' class='edit_user_btn' title='Usuń użytkownika'>
-						<img src='../../Functions/photos/icons/bin.png' class='edit_user_img'>
 					</button>
 				</td>
 			</tr>";

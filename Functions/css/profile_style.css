@@ -17,7 +17,6 @@ html {
     --radius_uslugi: 1rem;
 }
 
-
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -36,7 +35,7 @@ nav {
     position: fixed;
     min-width: 20%;
     height: 100%;
-    z-index: 10000;
+    z-index: 998;
     background-color: var(--ciemny_szary);
 }
 
@@ -342,6 +341,12 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
     padding-left: 4rem;
     padding-right: 4rem;
 }
+
+h6{
+    color: var(--bialy);
+    font-size: 2rem;
+    display: none;
+}
 /* /calendar PODSTRONA */
 
 /* users PODSTRONA */
@@ -362,6 +367,7 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
 }
 
 .look_for{
+    margin-top: 0.5em;
     margin-bottom: 1rem;
     width: 8rem;
     height: 1.5rem;
@@ -418,13 +424,11 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
     background: rgb(0, 180, 180);
 }
 
-
 .usersTable_td1 {
     font-size: 0.8rem;
     vertical-align: middle;
     background: rgb(0, 40, 160);
 }
-
 
 .usersTable_td2 {
     font-size: 0.8rem;
@@ -432,13 +436,11 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
     background: rgb(0, 120, 140);
 }
 
-
 .usersTable_td3 {
     font-size: 0.8rem;
     vertical-align: middle;
     background: rgb(0, 60, 120);
 }
-
 
 .usersTable_td4 {
     font-size: 0.8rem;
@@ -477,7 +479,7 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
     width: 100vw;
     height: 100vh;
     background: rgb(0, 0, 0, 0.8);
-    z-index: 10000;
+    z-index: 9999;
     display: none;
 }
 
@@ -493,19 +495,16 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
     background: var(--jasny_szary);
     border-radius: 1rem;
     box-shadow: 0 0 15px -2px #fff;
-}
-
-.usersTableManage {
-    position: relative;
+    z-index: 10000;
+    display: none;
 }
 
 .scroll_box {
     overflow: auto;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 5%;
     margin-top: 3rem;
+    height: 80%;
 }
-
 
 .usersTable_td_manage {
     border-radius: 0;
@@ -515,25 +514,7 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
     background: var(--sredni_szary);
 }
 
-#escape {
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    border-radius: 50%;
-    padding: 0.3em;
-    background: rgb(111, 0, 0);
-    border: 0.1em solid var(--bialy);
-    cursor: pointer;
-}
 
-    #escape:hover {
-        background: rgb(144, 0, 0);
-    }
-
-.escape_img{
-    width: 0.7rem;
-    height: 0.7rem;
-}
 
 /* /users PODSTRONA */
 
@@ -636,8 +617,27 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
         transition: 0.6s;
     }
 
-/* /files PODSTRONA */
+.usersTableLabel {
+    color: var(--bialy);
+    font-size: 1.5rem;
+}
 
+.usersTableManage{
+    margin-bottom: 1em;
+    margin-top: 0.5em
+}
+
+.filesTableLabel{
+    color: var(--bialy);
+    font-size: 1.5rem;
+}
+
+.filesTableManage {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+/* /files PODSTRONA */
 .bubble {
     position: fixed;
     top: 2em;
@@ -660,6 +660,7 @@ h5{
     font-size: 1rem;
     display: none;
 }
+
 /*---------------------------90em--------------------------------------*/
 @media screen and (max-width: 90em) {
 
@@ -754,6 +755,14 @@ h5{
 
 /*---------------------------60em--------------------------------------*/
 @media screen and (max-width: 60em) {
+
+    iframe{
+        display: none;
+    }
+
+    h6{
+        display: initial;
+    }
 
     .usersTable_th {
         font-size: 0.7em;

@@ -7,10 +7,10 @@ if(isset($_POST["submit"])){
 	$email = $_POST["email"];
 	$username = $_POST["uid"];
 	$pwd = $_POST["pwd"];
-	$pwdRepeat = $_POST["pwdrepeat"];
+	$pwdrepeat = $_POST["pwdrepeat"];
 
 	$subject = 'Smile Factory konto';
-	$message = 'Twoje has³o do konta na stronie Smile Factory to: '.$pwd.' Proszê za login u¿yæ swojego emaila.';
+	$message = 'Twoje has³o do konta na stronie Smile Factory to: '.$pwd.' Proszê za login u¿yæ swojego e-maila.';
 
 	require_once 'dbh.inc.php';
 	require_once 'functions.inc.php';
@@ -30,7 +30,7 @@ if(isset($_POST["submit"])){
 		exit();
 	}
 	
-	if(pwdMatch($pwd, $pwdrepeat) == false){
+	if(pwdMatch($pwd, $pwdrepeat) !== false){
 		header("location: ../../Profil/Rejestracja/?error=passwordsdontmatch");
 		exit();
 	}

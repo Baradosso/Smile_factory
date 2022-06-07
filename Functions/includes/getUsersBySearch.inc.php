@@ -7,32 +7,32 @@ $order = $_GET["order_by"];
 
 switch($order){
 	case "0":
-		$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
+		$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
 			FROM users WHERE usersPos='user' AND (usersName LIKE ? OR usersSecondName LIKE ? OR usersEmail LIKE ? OR usersUid LIKE ? 
 			OR usersPhoneNumber LIKE ? OR usersCreateDate LIKE ?) ORDER BY usersName;";
 		break;
 	case "1":
-		$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
+		$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
 			FROM users WHERE usersPos='user' AND (usersName LIKE ? OR usersSecondName LIKE ? OR usersEmail LIKE ? OR usersUid LIKE ? 
 			OR usersPhoneNumber LIKE ? OR usersCreateDate LIKE ?) ORDER BY usersSecondName;";
 		break;
 	case "2":
-		$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
+		$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
 			FROM users WHERE usersPos='user' AND (usersName LIKE ? OR usersSecondName LIKE ? OR usersEmail LIKE ? OR usersUid LIKE ? 
 			OR usersPhoneNumber LIKE ? OR usersCreateDate LIKE ?) ORDER BY usersEmail;";
 		break;
 	case "3":
-		$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
+		$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
 			FROM users WHERE usersPos='user' AND (usersName LIKE ? OR usersSecondName LIKE ? OR usersEmail LIKE ? OR usersUid LIKE ? 
 			OR usersPhoneNumber LIKE ? OR usersCreateDate LIKE ?) ORDER BY usersUid;";
 		break;
 	case "4":
-		$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
+		$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
 			FROM users WHERE usersPos='user' AND (usersName LIKE ? OR usersSecondName LIKE ? OR usersEmail LIKE ? OR usersUid LIKE ? 
 			OR usersPhoneNumber LIKE ? OR usersCreateDate LIKE ?) ORDER BY usersPhoneNumber;";
 		break;
 	case "5":
-		$sql = "SELECT usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
+		$sql = "SELECT usersId, usersName, usersSecondName, usersEmail, usersUid, IFNULL(usersPhoneNumber, 'Brak numeru') AS usersPhoneNumber, usersCreateDate 
 			FROM users WHERE usersPos='user' AND (usersName LIKE ? OR usersSecondName LIKE ? OR usersEmail LIKE ? OR usersUid LIKE ? 
 			OR usersPhoneNumber LIKE ? OR usersCreateDate LIKE ?) ORDER BY usersCreateDate;";
 		break;
@@ -76,11 +76,6 @@ while($row = mysqli_fetch_assoc($resultData)){
 				<td class='edit_user_td'>
 					<button value=".$row['usersUid']." onclick='manageUser(this.value)' class='edit_user_btn' title='Zarządzaj plikami użytkownika'>
 						<img src='../../Functions/photos/icons/files.png' class='edit_user_img'>
-					</button>
-				</td>
-				<td class='edit_user_td'>
-					<button value=".$row['usersUid']." onclick='deleteUser(this.value)' class='edit_user_btn' title='Usuń użytkownika'>
-						<img src='../../Functions/photos/icons/bin.png' class='edit_user_img'>
 					</button>
 				</td>
 			</tr>";

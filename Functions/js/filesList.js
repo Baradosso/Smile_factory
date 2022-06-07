@@ -13,7 +13,7 @@ function loadDb() {
     xhttp.send();
 }
 
-function deleteUser(file) {
+function deleteFile(file) {
     var xhttp;
     xhttp = new XMLHttpRequest();
     var text = "Na pewno chesz usunąć ten plik: " + file + "?";
@@ -26,23 +26,3 @@ function deleteUser(file) {
     loadDb();
 }
 
-function manageFiles(file) {
-    var xhttp;
-    xhttp = new XMLHttpRequest();
-
-    document.getElementById("managePageSection").style.display = "initial";
-    document.getElementById("managePage").style.display = "initial";
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("manageFiles").innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("GET", "../../Functions/includes/filesManage.inc.php?file=" + file, true);
-    xhttp.send();
-}
-
-function closeManageWindow() {
-    document.getElementById("managePageSection").style.display = "none";
-    document.getElementById("managePage").style.display = "none";
-}

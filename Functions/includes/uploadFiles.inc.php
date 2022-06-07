@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 	$fileExt = explode('.', $fileName);
 	$fileActualExt = strtolower(end($fileExt));
 
-	$allowed = array('jpg', 'jpeg', 'zip');
+	$allowed = array('zip');
 
 	if(in_array($fileActualExt, $allowed)){
 		if($fileError === 0){
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
 				$fileDestination = "../../PlikiZip/".$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
 
-				$sql = "INSERT INTO files(filesName, filesPath, filesComment) VALUES (?, ?, ?);";
+				$sql = "INSERT INTO files(filesName, filesPath, filesComment, filesSize) VALUES (?, ?, ?, ?);";
 				$stmt = mysqli_stmt_init($conn);
 
 				if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
 						exit();
 				}
 
-				mysqli_stmt_bind_param($stmt, 'sss', $fileNameNew, $fileDestination, $fileComment);
+				mysqli_stmt_bind_param($stmt, 'sssi', $fileNameNew, $fileDestination, $fileComment, $fileSize);
 				mysqli_stmt_execute($stmt);
 				mysqli_stmt_close($stmt);
 

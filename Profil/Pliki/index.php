@@ -5,16 +5,13 @@
         header("location: ../../");
     }
 ?>
-<div id="managePage" class="managePage">
-    <div id="managePageSection" class="managePageSection">
-        <button id="escape" onclick="closeManageWindow()"><img src="../../Functions/Photos/Icons/escape.png"  class='escape_img' ></button>
-        <div class="scroll_box">
-            <div id="manageFiles">
-            </div>
-        </div>  
-    </div>
+<div id="managePage" class="managePage" onclick="closeManageWindow()"></div>
+<div id="managePageSection" class="managePageSection">
+    <div class="scroll_box">
+        <div id="manageFiles">
+        </div>
+    </div>  
 </div>
-
 <section class="page">
     <div class="files_page">
         <div>

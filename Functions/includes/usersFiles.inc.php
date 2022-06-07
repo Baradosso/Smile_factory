@@ -48,15 +48,8 @@ while($row = mysqli_fetch_assoc($resultData)){
 				<td class='filesTable_td".$inc."'>".$row['filesCreateDate']."</td>
 				<td class='filesTable_td".$inc."'>".$row['filesSize']."</td>
 				<td class='edit_files_td'>
-					<a href='../../Functions/includes/filesDownload.inc.php?fileName=".$row['filesName']."'>
-						<button type='submit' class='edit_files_btn' title='Pobierz plik'>
-							<img src='../../Functions/photos/icons/download.png' class='edit_files_img'>
-						</button>
-					</a>
-				</td>
-				<td class='edit_files_td'>
-					<button value=".$row['filesName']." onclick='deleteFile(this.value)' class='edit_files_btn' title='UsuÅ„ plik'>
-						<img src='../../Functions/photos/icons/bin.png' class='edit_files_img'>
+					<button onclick='setRelation(this.value)' class='edit_files_btn' title='Udostêpnij plik u¿ytkownikowi' value='".$row['filesName']."'>
+						<img src='../../Functions/photos/icons/plus.png' class='edit_files_img'>
 					</button>
 				</td>
 			</tr>";
