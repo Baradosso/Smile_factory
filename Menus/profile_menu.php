@@ -12,7 +12,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Smile Factory, SmileFactory, Fotobudka, Fotolustro, Oprawa muzyczna, Oprawa" />
+    <meta name="description" content="Organizacja imprez dla Ciebie">
+    <meta name="keywords" content="smile, factory, smilefactory, fotobudka, fotolustro, oprawa muzyczna, oprawa, wolsztyn, jarosław, wróblewski" />
+    <link rel="icon" type="image/png" href="../../logo_white.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="../../Functions/css/reset.css" rel="stylesheet" />
