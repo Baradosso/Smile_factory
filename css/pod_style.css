@@ -44,7 +44,7 @@ nav {
     white-space: nowrap;
     transition: 0.6s;
     min-height: 8vh;
-    z-index: 10000;
+    z-index: 10002;
     margin: 0;
     background-color: var(--ciemny_szary);
     box-shadow: 0 6px 15px -2px #fff;
@@ -53,7 +53,6 @@ nav {
 .nav-links {
     position: relative;
     display: flex;
-    justify-content: space-between;
     white-space: nowrap;
     width: 60%;
 }
@@ -241,6 +240,24 @@ h3 {
 /* /FAQ PODSTRONA */
 
 /* log PODSTRONA */
+.bubble {
+    position: fixed;
+    top: 12vh;
+    width: 11em;
+    background: var(--ciemny_szary);
+    opacity: 0.9;
+    text-align: center;
+    padding: 3em;
+    border-radius: 2em;
+    transition: 1s;
+    z-index: 100000;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .sig_page {
     text-align: center;
     position: relative;
@@ -399,7 +416,7 @@ h2 {
     .nav-links {
         right: 0;
         position: absolute;
-        height: 92vh;
+        height: 90vh;
         top: 100%;
         background-color: var(--ciemny_szary);
         display: flex;

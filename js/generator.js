@@ -18,3 +18,4 @@ document.getElementById("pwdCopy").onclick = function copyPassword() {
 
     return false;
 }
+

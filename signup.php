@@ -35,25 +35,25 @@
                 <?php
                     if(isset($_GET["error"])){
                         if($_GET["error"] == "emptyinput"){
-                            echo "<p>BŁĄD! Pola nie mogą być puste!</p>";
+                            echo "<div class=\"bubble\">Pola nie mogą być puste!</div>";
                         }
                         else if($_GET["error"] == "invaliduid"){
-                            echo "<p>BŁĄD! Wpisz poprawnie nazwę firmy!</p>";
+                            echo "<div class=\"bubble\">Wpisz poprawnie nazwę firmy!</div>";
                         }
                         else if($_GET["error"] == "invalidemail"){
-                            echo "<p>BŁĄD! Wpisz poprawny email!</p>";
+                            echo "<div class=\"bubble\">Wpisz poprawny email!</div>";
                         }
                         else if($_GET["error"] == "passwordsdontmatch"){
-                            echo "<p>BŁĄD! Wpisane hasła się nie pokrywają!</p>";
+                            echo "<div class=\"bubble\">Wpisane hasła się nie pokrywają!</div>";
                         }
                         else if($_GET["error"] == "stmtfailed"){
-                            echo "<p>BŁĄD! Coś poszło nie tak, spróbuj ponownie!</p>";
+                            echo "<div class=\"bubble\">Coś poszło nie tak, spróbuj ponownie!</div>";
                         }
                         else if($_GET["error"] == "usernametaken"){
-                            echo "<p>BŁĄD! Nazwa firmy już istnieje w bazie!</p>";
+                            echo "<div class=\"bubble\">Nazwa firmy lub e-mail już istnieje w bazie!</div>";
                         }
                         else if($_GET["error"] == "none"){
-                            echo "<p>Poprawnie zarejestrowano użytkownika!</p>";
+                            echo "<div class=\"bubble\">Poprawnie zarejestrowano użytkownika!</div>";
                         }
                     }
                 ?>
@@ -77,3 +77,5 @@
 ?>
 
 <script src="js/generator.js"></script>
+<script src="js/bubble.js"></script>
+

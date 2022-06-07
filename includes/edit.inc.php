@@ -28,18 +28,24 @@ if(isset($_POST["submit"])){
 		$_SESSION["usersecondname"] = $secondname;
 	}
 
-	if($email !== $_SESSION["useremail"] && $secondname != Null && $secondname != ""){
+	if($email !== $_SESSION["useremail"] && $email != Null && $email != ""){
 		if(invalidEmail($email) !== false){
 			header("location: ../profile.php?error=wrongemail");
 			exit();
 		}
 		else{
-			updateDbEmail($conn, $email, $userid);
-			$_SESSION["useremail"] = $email;
+			if(uidExists($conn, $email, $email) !== false){
+				header("location: ../signup.php?error=emailtaken");
+				exit();
+			}
+			else{
+				updateDbEmail($conn, $email, $userid);
+				$_SESSION["useremail"] = $email;
+			}
 		}
 	}
 
-	if($phone !== $_SESSION["userphone"] && $secondname != Null && $secondname != ""){
+	if($phone !== $_SESSION["userphone"] && $phone != Null && $phone != ""){
 		if(preg_match('/[0-9]{9}/', $phone)){
 			updateDbPhone($conn, $phone, $userid);
 			$_SESSION["userphone"] = $phone;

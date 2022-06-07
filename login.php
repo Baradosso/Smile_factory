@@ -24,13 +24,13 @@
                 <?php
                     if(isset($_GET["error"])){
                         if($_GET["error"] == "emptyinput"){
-                            echo "<p>Pola nie mogą być puste!</p>";
+                            echo "<div class=\"bubble\">Pola nie mogą być puste!</div>";
                         }
                         else if($_GET["error"] == "wronglogin"){
-                            echo "<p>Niepoprawny e-mail!</p>";
+                            echo "<div class=\"bubble\">Niepoprawny e-mail!</div>";
                         }
                         else if($_GET["error"] == "wrongpwd"){
-                            echo "<p>Niepoprawne hasło!</p>";
+                            echo "<div class=\"bubble\">Niepoprawne hasło!</div>";
                         }
                     }
                 ?>
@@ -45,3 +45,5 @@
 <?php
     include_once 'pod_footer.php';
 ?>
+
+<script src="js/bubble.js"></script>
