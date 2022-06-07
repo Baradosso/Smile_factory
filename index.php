@@ -63,7 +63,7 @@
             <div class="service_buttons">
                 <div class="button_border">
                     <?php
-                        echo    '<a href="./Uslugi/index.php?status=1" class="button_services">
+                        echo    '<a href="./Uslugi/?status=1" class="button_services">
                                     <h6>Oprawa Muzyczno-Konferansjerska</h6>
                                     <img src="./Functions/photos/services/image1.JPG" />
                                 </a>';

@@ -349,26 +349,22 @@ h2 {
     margin-top: 0;
     margin-bottom: 1rem;
     color: var(--bialy);
-    white-space: nowrap;
     margin-top: 0;
 }
 
 .about_us {
     position: relative;
     display: flex;
+    flex-direction: column;
 }
 
     .about_us img {
-        position: relative;
-        width: 20rem;
-        height: 20rem;
+        height: 20%;
         object-fit: cover;
-        margin-right: 1.5rem;
         border: 0.3rem solid;
         border-image-slice: 1;
         border-image-source: var(--gradient);
-        left: 0;
-        float: left;
+        margin-bottom: 2rem;
     }
 
     .about_us p {
@@ -402,6 +398,12 @@ h2 {
         font-size: 1.3rem;
     }
     /* /Footer */
+
+    /* About us */
+    .about_us p {
+        font-size: 1.3rem;
+    }
+    /* /About us */
 }
 /*---------------------------90em--------------------------------------*/
 
@@ -488,7 +490,7 @@ h2 {
     /* /Regulamin PODSTRONA */
 
     /* FAQ PODSTRONA */
-    h3 {
+    h3, h2 {
         font-size: 1.8rem;
     }
     /* /FAQ PODSTRONA */
@@ -498,6 +500,12 @@ h2 {
         font-size: 1.1rem;
     }
     /* /Footer */
+
+    /* About us */
+    .about_us p {
+        font-size: 1.2rem;
+    }
+    /* /About us */
 
 }
 /*---------------------------70em--------------------------------------*/
@@ -516,7 +524,7 @@ h2 {
     /* /Regulamin PODSTRONA */
 
     /* FAQ PODSTRONA */
-    h3 {
+    h3, h2 {
         font-size: 1.6rem;
     }
     /* /FAQ PODSTRONA */
@@ -526,6 +534,12 @@ h2 {
         font-size: 1rem;
     }
     /* /Footer */
+
+    /* About us */
+    .about_us p {
+        font-size: 1rem;
+    }
+    /* /About us */
 }
 /*---------------------------60em--------------------------------------*/
 
@@ -543,7 +557,7 @@ h2 {
     /* /Regulamin PODSTRONA */
 
     /* FAQ PODSTRONA */
-    h3 {
+    h3, h2 {
         font-size: 1.4rem;
     }
     /* /FAQ PODSTRONA */
@@ -553,6 +567,12 @@ h2 {
         font-size: 0.8rem;
     }
     /* /Footer */
+
+    /* About us */
+    .about_us p {
+        font-size: 0.8rem;
+    }
+    /* /About us */
 
 }
 /*---------------------------50em--------------------------------------*/
@@ -571,7 +591,7 @@ h2 {
     /* /Regulamin PODSTRONA */
 
     /* FAQ PODSTRONA */
-    h3 {
+    h3, h2 {
         font-size: 1.2rem;
     }
     /* /FAQ PODSTRONA */
@@ -596,6 +616,12 @@ h2 {
         margin-left: 0;
         margin-right: 0;
     }
+
+    /* About us */
+    .about_us p {
+        font-size: 0.55rem;
+    }
+    /* /About us */
 }
 /*---------------------------40em--------------------------------------*/
 
@@ -633,6 +659,12 @@ h2 {
         margin-left: auto;
         right: 5%;
     }
+
+    /* About us */
+    .about_us p {
+        font-size: 0.5rem;
+    }
+    /* /About us */
 }
 /*---------------------------30em--------------------------------------*/
 
