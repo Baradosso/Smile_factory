@@ -28,6 +28,7 @@ html{
 
 body {
     background-color: var(--ciemny_szary);
+    overflow-x: hidden;
 }
 
 /* Nawigacja pocz�tek*/
@@ -36,12 +37,12 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
     white-space: nowrap;
     transition: 0.6s;
-    min-height: 8%;
+    min-height: 8vh;
     z-index:10000;
 }
 
@@ -174,14 +175,14 @@ nav.sticky h1 {
 .logo_main {
     position: relative;
     display: flex;
-    width: 17%;
+    width: 18%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-top: 11%;
+    margin-top: 10%;
 }
 
 .logo_main::before {
@@ -466,37 +467,36 @@ footer {
 }
 
 /* Kontakt */
-.kontakt{
+.kontakt {
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.kontakt a{
+.kontakt a {
     text-decoration: none;
 }
 
-.kontakt img{
+.kontakt img {
     height: 2.5rem;
     margin-right: 1.5rem;
     opacity: 0.6;
 }
 
-.kontakt img:hover{
+.kontakt img:hover {
     opacity: 1;
     transition: 0.6s;
 }
 
-.kontakt p{
+.kontakt p {
     color: var(--bialy);
     font-size: 1.5rem;
     margin-right: 2rem;
     white-space: nowrap;
     opacity: 0.6;
-
 }
 
-#regulamin:hover{
+#regulamin:hover {
     opacity: 1;
     transition: 0.6s;
 }
@@ -549,6 +549,7 @@ hr {
 /* /Burger */
 
 @media screen and (max-width: 70em) {
+
     body {
         overflow-x: hidden;
     }
@@ -665,9 +666,8 @@ hr {
     }
 
     .kontakt p {
-        font-size: 1.5rem;
-        margin-right: 0.5rem;
-    }
+        font-size: 1.25rem;
+    }    
 }
 /*---------------------------70em--------------------------------------*/
 
@@ -754,18 +754,18 @@ hr {
     }
 
     .kontakt p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         margin-right: 0.5rem;
     }         
     /* /Kontakt */
 
-    .copyright p{
+    .copyright p{;
         font-size: 0.8rem;
     }
     /* /Stopka */
 
 }
-/*---------------------------40em--------------------------------------*/
+/*---------------------------50em--------------------------------------*/
 
 /*---------------------------30em--------------------------------------*/
 @media screen and (max-width: 30em) {

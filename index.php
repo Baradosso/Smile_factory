@@ -15,10 +15,9 @@
             <h1>Smile Factory</h1>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="#o_nas">O nas</a></li>
-            <li><a href="#uslugi">Nasze usługi</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="index.php">Strona główna</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Zaloguj_sie.php">Zaloguj się</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -85,33 +84,42 @@
 
             <div class="double_uslugi">
                 <div class="button_border">
-                    <a href="Oprawa.html" class="button_uslugi">
-                        <h6>Oprawa Muzyczno-Konferansjerska</h6>
-                        <img src="uslugi/image1.jpg" />
-                    </a>
+                    <?php
+                        echo    '<a href="Uslugi.php?status=1" class="button_uslugi">
+                                    <h6>Oprawa Muzyczno-Konferansjerska</h6>
+                                    <img src="uslugi/image1.jpg" />
+                                </a>';
+                    ?>
                 </div>
                 <div class="button_border">
-                    <a href="Naglosnienie.html" class="button_uslugi">
-                        <h6>Nagłośnienie i Oświetlenie</h6>
-                        <img src="uslugi/image2.jpg" />
-                    </a>
+                    <?php
+                        echo    '<a href="Uslugi.php?status=2" class="button_uslugi">
+                                    <h6>Nagłośnienie i Oświetlenie</h6>
+                                    <img src="uslugi/image2.jpg" />
+                                </a>';
+                    ?>
                 </div>
             </div>
 
             <div class="double_uslugi">
                 <div class="button_border">
-                    <a href="Wynajem.html" class="button_uslugi">
-                        <h6>Wynajem Namiotów</h6>
-                        <img src="uslugi/image3.jpg" />
-                    </a>
+                    <?php
+                        echo    '<a href="Uslugi.php?status=3" class="button_uslugi">
+                                    <h6>Wynajem Namiotów</h6>
+                                    <img src="uslugi/image3.jpg" />
+                                </a>';
+                    ?>
                 </div>
                 <div class="button_border">
-                    <a href="Fotobudka.html" class="button_uslugi">
-                        <h6>Fotobudka i fotolustro</h6>
-                        <img src="uslugi/image4.jpg" />
-                    </a>
+                   <?php
+                        echo    '<a href="Uslugi.php?status=4" class="button_uslugi">
+                                    <h6>Fotobudka i fotolustro</h6>
+                                    <img src="uslugi/image4.jpg" />
+                                </a>';
+                    ?>
                 </div>
             </div>
+
         </div>
 
         <div class="zaufali_nam">
