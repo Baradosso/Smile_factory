@@ -9,7 +9,7 @@
 
             <p class="contact_inf">606 885 970</p>
 
-            <p class="contact_inf" id="regulamin"><a href="regulamin.php"  class="kontakt_link">regulamin</a></p>
+            <p class="contact_inf" id="regulamin"><a href="../Regulamin"  class="kontakt_link">regulamin</a></p>
         </div>
 
         <hr />
@@ -21,3 +21,4 @@
 </body>
 </html>
 
+<script src="../Functions/js/app.js"></script>

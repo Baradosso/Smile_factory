@@ -1,8 +1,8 @@
 <?php
-    include_once 'profile_menu.php';
+    include_once '../../Menus/profile_menu.php';
 
     if((!isset($_SESSION["userpos"]) && $_SESSION["userpos"] !== "admin")){
-        header("location: index.php");
+        header("location: ../../");
     }
 ?>
 
@@ -13,5 +13,5 @@
 </section>
 
 <?php
-    include_once 'profile_footer.php';
+    include_once '../../Footers/profile_footer.php';
 ?>

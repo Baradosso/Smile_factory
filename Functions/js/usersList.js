@@ -8,7 +8,7 @@ function loadDb(str) {
                 document.getElementById("usersList").innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "includes/getUsers.inc.php?", true);
+        xhttp.open("GET", "../../Functions/includes/getUsers.inc.php?", true);
         xhttp.send();
         return;
     }
@@ -19,6 +19,6 @@ function loadDb(str) {
             document.getElementById("usersList").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "includes/getUsersBySearch.inc.php?search=" + str, true);
+    xhttp.open("GET", "../../Functions/includes/getUsersBySearch.inc.php?search=" + str, true);
     xhttp.send();
 }

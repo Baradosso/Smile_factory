@@ -351,12 +351,19 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
    height: 1.5rem;
 }
 
+.usersContainer {
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    max-height: 35rem;
+}
+
 .usersTable_th, .usersTable_td {
     border-radius: 0;
     border: 0.1em solid var(--bialy);
     padding: 0.5em;
     color: var(--bialy);
     background: var(--sredni_szary);
+    white-space: nowrap;
 }
 
 .usersTable_th{
@@ -368,13 +375,6 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="email"
 .usersTable_td{
     font-size: 0.8rem;
     vertical-align: middle;
-}
-
-.usersContainer {
-    margin-left: 10%;
-    margin-right: 10%;
-    max-height: 35rem;
-    overflow: auto;
 }
 
 .edit_user_td{

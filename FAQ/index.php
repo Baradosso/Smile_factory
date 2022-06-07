@@ -1,5 +1,5 @@
 <?php
-    include_once 'pod_menu.php';
+    include_once '../Menus/pod_menu.php';
 ?>
 
 <section class="page">
@@ -68,5 +68,5 @@
 </section>
 
 <?php
-    include_once 'pod_footer.php';
+    include_once '../Footers/pod_footer.php';
 ?>

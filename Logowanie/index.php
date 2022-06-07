@@ -1,8 +1,8 @@
 <?php
-    include_once 'pod_menu.php';
+    include_once '../Menus/pod_menu.php';
 
     if (isset($_SESSION["userid"])) {
-        header("location: index.php");
+        header("location: ../");
     }
 ?>
 
@@ -13,7 +13,7 @@
 
             <h4>Zaloguj się</h4>
 
-            <form action="includes/login.inc.php" method="POST" class="signup">
+            <form action="../Functions/includes/login.inc.php" method="POST" class="signup">
 
                 <label for="email">Podaj swój e-mail:</label>
                 <input type="text" name="uid" placeholder="Email" >
@@ -36,14 +36,14 @@
                 ?>
 
                 <button type="submit" name="submit">Zaloguj się</button>
-                <a href="FAQ.php">Nie pamiętam hasła</a>
+                <a href="../FAQ">Nie pamiętam hasła</a>
             </form>
         </section>
     </div>
 </section>
 
 <?php
-    include_once 'pod_footer.php';
+    include_once '../Footers/pod_footer.php';
 ?>
 
-<script src="js/bubble.js"></script>
+<script src="../Functions/js/bubble.js"></script>

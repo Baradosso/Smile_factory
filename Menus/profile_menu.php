@@ -2,7 +2,7 @@
     session_start();
 
     if(!isset($_SESSION["userpos"])){
-        header("location: index.php");
+        header("location: ../../");
     }
 ?>
 
@@ -16,8 +16,8 @@
     <meta name="keywords" content="Smile Factory, SmileFactory, Fotobudka, Fotolustro, Oprawa muzyczna, Oprawa" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="css\reset.css" rel="stylesheet" />
-    <link href="css\profile_style.css" rel="stylesheet" />
+    <link href="../../Functions/css/reset.css" rel="stylesheet" />
+    <link href="../../Functions/css/profile_style.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Smile Factory</title>
 </head>
@@ -25,41 +25,41 @@
 <body class="bg_image">
     <nav>
         <table class="nav_table">
-            <tr onclick="window.location='index.php';" class="nav_tr">
-                <td class="img_td"><img src="photos/icons/home.png" class="nav_icons"/></td>    
+            <tr onclick="window.location='../../';" class="nav_tr">
+                <td class="img_td"><img src="../../Functions/photos/icons/home.png" class="nav_icons"/></td>    
                 <td class="nav_td"><p>Strona główna</p></td>
             </tr>
 
-            <tr onclick="window.location='profile.php';" class="nav_tr">
-                <td class="img_td"><img src="photos/icons/profile.png" class="nav_icons"/></td>
+            <tr onclick="window.location='../Twoj-profil';" class="nav_tr">
+                <td class="img_td"><img src="../../Functions/photos/icons/profile.png" class="nav_icons"/></td>
                 <td class="nav_td"><p>Profil</p></td>
             </tr>
 
             <?php
                 if($_SESSION["userpos"] !== "admin"){
-                    echo    '<tr onclick="window.location=\'dow_files.php\';" class="nav_tr">
-                                <td class="img_td"><img src="photos/icons/files.png" class="nav_icons"/></td>
+                    echo    '<tr onclick="window.location=\'../Pliki-do-pobrania\';" class="nav_tr">
+                                <td class="img_td"><img src="../../Functions/photos/icons/files.png" class="nav_icons"/></td>
                                 <td class="nav_td"><p>Pliki do pobrania</p></td>
                             </tr>';
                 }
                 else{
-                    echo    '<tr onclick="window.location=\'signup.php\';" class="nav_tr">
-                                <td class="img_td"><img src="photos/icons/register.png" class="nav_icons"/></td>
+                    echo    '<tr onclick="window.location=\'../Rejestracja\';" class="nav_tr">
+                                <td class="img_td"><img src="../../Functions/photos/icons/register.png" class="nav_icons"/></td>
                                 <td class="nav_td"><p>Rejestracja</p></td>
                             </tr>
-                            <tr onclick="window.location=\'users_list.php\';" class="nav_tr">
-                                <td class="img_td"><img src="photos/icons/users.png" class="nav_icons"/></td>
+                            <tr onclick="window.location=\'../Uzytkownicy\';" class="nav_tr">
+                                <td class="img_td"><img src="../../Functions/photos/icons/users.png" class="nav_icons"/></td>
                                 <td class="nav_td"><p>Użytkownicy</p></td>
                             </tr>
-                            <tr onclick="window.location=\'files_list.php\';" class="nav_tr">    
-                                <td class="img_td"><img src="photos/icons/files.png" class="nav_icons"/></td>
+                            <tr onclick="window.location=\'../Pliki\';" class="nav_tr">    
+                                <td class="img_td"><img src="../../Functions/photos/icons/files.png" class="nav_icons"/></td>
                                 <td class="nav_td"><p>Lista plików</p></td>
                             </tr>';
                 }
             ?>
 
-            <tr onclick="window.location='includes/logout.inc.php';" class="nav_tr">
-                <td class="img_td"><img src="photos/icons/log_out.png" class="nav_icons"/></td>
+            <tr onclick="window.location='../../Functions/includes/logout.inc.php';" class="nav_tr">
+                <td class="img_td"><img src="../../Functions/photos/icons/log_out.png" class="nav_icons"/></td>
                 <td class="nav_td"><p>Wyloguj się</p></td>
             </tr>
         </table>

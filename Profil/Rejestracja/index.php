@@ -1,8 +1,8 @@
 <?php
-    include_once 'profile_menu.php';
+    include_once '../../Menus/profile_menu.php';
 
     if($_SESSION["userpos"] !== "admin"){
-        header("location: index.php");
+        header("location: ../../");
     }
 ?>
 
@@ -12,7 +12,7 @@
 
             <h4>Zarejestruj użytkownika</h4>
 
-            <form action="includes/signup.inc.php" method="POST" class="signup">
+            <form action="../../Functions/includes/signup.inc.php" method="POST" class="signup">
 
                 <label for="name">Podaj imię użytkownika:</label>
                 <input type="text" name="name" placeholder="Pełne imię" >
@@ -73,9 +73,9 @@
 </section>
 
 <?php
-    include_once 'profile_footer.php';
+    include_once '../../Footers/profile_footer.php';
 ?>
 
-<script src="js/generator.js"></script>
-<script src="js/bubble.js"></script>
+<script src="../../Functions/js/generator.js"></script>
+<script src="../../Functions/js/bubble.js"></script>
 

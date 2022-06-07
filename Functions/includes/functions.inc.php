@@ -48,7 +48,7 @@ function uidExists($conn, $username, $email){
 	$sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../signup.php?error=stmtfailed");
+		header("location: ../../Profil/Rejestracja/?error=stmtfailed");
 		exit();
 	}
 
@@ -71,7 +71,7 @@ function createUser($conn, $name, $secondname, $email, $username, $pwd){
 	$sql = "INSERT INTO users(usersName, usersSecondName, usersEmail, usersUid, usersPwd, usersCreateDate) VALUES(?, ?, ?, ?, ?, DATE_FORMAT(NOW(), '%Y.%m.%d'));";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../signup.php?error=stmtfailed");
+		header("location: ../../Profil/Rejestracja/?error=stmtfailed");
 		exit();
 	}
 
@@ -80,7 +80,7 @@ function createUser($conn, $name, $secondname, $email, $username, $pwd){
 	mysqli_stmt_bind_param($stmt, "sssss", $name, $secondname, $email, $username, $hashedPwd);
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
-	header("location: ../signup.php?error=none");
+	header("location: ../../Profil/Rejestracja/?error=none");
 	exit();
 }
 
@@ -99,7 +99,7 @@ function loginUser($conn, $username, $pwd){
 	$uidExists = uidExists($conn, $username, $username);
 
 	if($uidExists === false){
-		header("location: ../login.php?error=wronglogin");
+		header("location: ../../Logowanie/?error=wronglogin");
 		exit();
 	}
 
@@ -107,7 +107,7 @@ function loginUser($conn, $username, $pwd){
 	$checkPwd = password_verify($pwd, $pwdHashed);
 
 	if($checkPwd === false){
-		header("location: ../login.php?error=wrongpwd");
+		header("location: ../../Logowanie/?error=wrongpwd");
 		exit();
 	}
 	else if($checkPwd === true){
@@ -119,7 +119,7 @@ function loginUser($conn, $username, $pwd){
 		$_SESSION["usersecondname"] = $uidExists["usersSecondName"];
 		$_SESSION["useremail"] = $uidExists["usersEmail"];
 		$_SESSION["userphone"] = $uidExists["usersPhoneNumber"];
-		header("location: ../profile.php");
+		header("location: ../../Logowanie");
 		exit();
 	}
 }
@@ -130,7 +130,7 @@ function changePassword($conn, $pwd, $npwd, $rnpwd, $userid){
 	$stmt = mysqli_stmt_init($conn);
 
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
@@ -142,13 +142,13 @@ function changePassword($conn, $pwd, $npwd, $rnpwd, $userid){
 	if($row = mysqli_fetch_assoc($resultData)){
 	}
 	else{
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
 	mysqli_stmt_close($stmt);
 	if($uidExists === false){
-		header("location: ../profile.php?error=wronglogin");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
@@ -158,16 +158,16 @@ function changePassword($conn, $pwd, $npwd, $rnpwd, $userid){
 	$pattern = '/^(?=.*[\W|\D])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
 
 	if($checkPwd === false){
-		header("location: ../profile.php?error=wrongpwd");
+		header("location: ../../Profil/Twoj-profil/?error=wrongpwd");
 		exit();
 	}
 	else if($checkPwd === true){
 		if(pwdMatch($npwd, $rnpwd)){
-			header("location: ../profile.php?error=passwordsdontmatch");
+			header("location: ../../Profil/Twoj-profil/?error=passwordsdontmatch");
 			exit();
 		}
 		else if(preg_match($pattern, $npwd) == 0){
-			header("location: ../profile.php?error=nospecialcharacters");
+			header("location: ../../Profil/Twoj-profil/?error=nospecialcharacters");
 			exit();
 		}
 	}
@@ -179,7 +179,7 @@ function updateDbName($conn, $name, $userid){
 	$sql = "UPDATE users SET usersName=? WHERE usersId=?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
@@ -192,7 +192,7 @@ function updateDbSecondName($conn, $secondname, $userid){
 	$sql = "UPDATE users SET usersSecondName=? WHERE usersId=?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
@@ -205,7 +205,7 @@ function updateDbEmail($conn, $email, $userid){
 	$sql = "UPDATE users SET usersEmail=? WHERE usersId=?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
@@ -218,7 +218,7 @@ function updateDbPhone($conn, $phone, $userid){
 	$sql = "UPDATE users SET usersPhoneNumber=? WHERE usersId=?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
@@ -231,7 +231,7 @@ function updateDbPwd($conn, $npwd, $userid){
 	$sql = "UPDATE users SET usersPwd=? WHERE usersId=?;";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
-		header("location: ../profile.php?error=stmtfailed");
+		header("location: ../../Profil/Twoj-profil/?error=stmtfailed");
 		exit();
 	}
 
