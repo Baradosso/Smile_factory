@@ -43,7 +43,11 @@
                             </tr>';
                 }
                 else{
-                    echo    '<tr onclick="window.location=\'../Rejestracja\';" class="nav_tr">
+                    echo    '<tr onclick="window.location=\'../Kalendarz\';" class="nav_tr">
+                                <td class="img_td"><img src="../../Functions/photos/icons/calendar.png" class="nav_icons"/></td>
+                                <td class="nav_td"><p>Kalendarz</p></td>
+                            </tr>
+                            <tr onclick="window.location=\'../Rejestracja\';" class="nav_tr">
                                 <td class="img_td"><img src="../../Functions/photos/icons/register.png" class="nav_icons"/></td>
                                 <td class="nav_td"><p>Rejestracja</p></td>
                             </tr>

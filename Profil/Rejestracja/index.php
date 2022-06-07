@@ -1,7 +1,7 @@
 <?php
     include_once '../../Menus/profile_menu.php';
 
-    if($_SESSION["userpos"] !== "admin"){
+    if((!isset($_SESSION["userpos"]) && $_SESSION["userpos"] !== "admin")){
         header("location: ../../");
     }
 ?>

@@ -6,27 +6,27 @@ function loadDb() {
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("usersList").innerHTML = this.responseText;
+            document.getElementById("filesList").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "../../Functions/includes/getUsersBySearch.inc.php?search=" + str + "&order_by=" + order_by, true);
+    xhttp.open("GET", "../../Functions/includes/getFilesBySearch.inc.php?search=" + str + "&order_by=" + order_by, true);
     xhttp.send();
 }
 
-function deleteUser(user) {
+function deleteUser(file) {
     var xhttp;
     xhttp = new XMLHttpRequest();
-    var text = "Na pewno chesz usunąć tego użytkownika: " + user + "?";
+    var text = "Na pewno chesz usunąć ten plik: " + file + "?";
 
     if (confirm(text)) {
-        xhttp.open("POST", "../../Functions/includes/usersDelete.inc.php", true);
+        xhttp.open("POST", "../../Functions/includes/filesDelete.inc.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("useruid=" + user);
+        xhttp.send("fileName=" + file);
     }
     loadDb();
 }
 
-function manageUser(user) {
+function manageFiles(file) {
     var xhttp;
     xhttp = new XMLHttpRequest();
 
@@ -35,10 +35,10 @@ function manageUser(user) {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("manageUsersFiles").innerHTML = this.responseText;
+            document.getElementById("manageFiles").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "../../Functions/includes/usersManage.inc.php?user=" + user, true);
+    xhttp.open("GET", "../../Functions/includes/filesManage.inc.php?file=" + file, true);
     xhttp.send();
 }
 

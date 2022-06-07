@@ -68,7 +68,7 @@ function uidExists($conn, $username, $email){
 }
 
 function createUser($conn, $name, $secondname, $email, $username, $pwd){
-	$sql = "INSERT INTO users(usersName, usersSecondName, usersEmail, usersUid, usersPwd, usersCreateDate) VALUES(?, ?, ?, ?, ?, DATE_FORMAT(NOW(), '%Y.%m.%d'));";
+	$sql = "INSERT INTO users(usersName, usersSecondName, usersEmail, usersUid, usersPwd) VALUES(?, ?, ?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
 	if(!mysqli_stmt_prepare($stmt, $sql)){
 		header("location: ../../Profil/Rejestracja/?error=stmtfailed");
