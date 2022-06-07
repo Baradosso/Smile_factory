@@ -47,33 +47,33 @@
             <button type="submit" id="sbmt_btn" name="submit">Zatwierdź</button>
 
             <?php
-                    if(isset($_GET["error"])){
-                        if($_GET["error"] == "passwordsdontmatch"){
-                            echo "<div class=\"bubble\">Hasła się nie pokrywają!</div>";
-                        }
-                        else if($_GET["error"] == "wrongpwd"){
-                            echo "<div class=\"bubble\">Niepoprawne hasło!</div>";
-                        }
-                        else if($_GET["error"] == "invalidemail"){
-                            echo "<div class=\"bubble\">Wpisz poprawny email!</div>";
-                        }
-                        else if($_GET["error"] == "emailtaken"){
-                            echo "<div class=\"bubble\">Ten e-mail jest już zajęty!</div>";
-                        }
-                        else if($_GET["error"] == "stmtfailed"){
-                            echo "<div class=\"bubble\">Coś poszło nie tak, spróbuj ponownie!</div>";
-                        }
-                        else if($_GET["error"] == "wrongnumber"){
-                            echo "<div class=\"bubble\">Niepoprawny numer telefonu!</div>";
-                        }
-                        else if($_GET["error"] == "none"){
-                            echo "<div class=\"bubble\">Udało Ci się zmienić dane!</div>";
-                        }
-                        else if($_GET["error"] == "nospecialcharacters"){
-                            echo "<div class=\"bubble\">Nowe hasło musi zawierać przynajmniej jedną:</br>dużą literę, małą literę, liczbę i znak specjalny!</div>";
-                        }
+                if(isset($_GET["error"])){
+                    if($_GET["error"] == "passwordsdontmatch"){
+                        echo "<div class=\"bubble\">Hasła się nie pokrywają!</div>";
                     }
-                ?>
+                    else if($_GET["error"] == "wrongpwd"){
+                        echo "<div class=\"bubble\">Niepoprawne hasło!</div>";
+                    }
+                    else if($_GET["error"] == "invalidemail"){
+                        echo "<div class=\"bubble\">Wpisz poprawny email!</div>";
+                    }
+                    else if($_GET["error"] == "emailtaken"){
+                        echo "<div class=\"bubble\">Ten e-mail jest już zajęty!</div>";
+                    }
+                    else if($_GET["error"] == "stmtfailed"){
+                        echo "<div class=\"bubble\">Coś poszło nie tak, spróbuj ponownie!</div>";
+                    }
+                    else if($_GET["error"] == "wrongnumber"){
+                        echo "<div class=\"bubble\">Niepoprawny numer telefonu!</div>";
+                    }
+                    else if($_GET["error"] == "none"){
+                        echo "<div class=\"bubble\">Udało Ci się zmienić dane!</div>";
+                    }
+                    else if($_GET["error"] == "nospecialcharacters"){
+                        echo "<div class=\"bubble\">Nowe hasło musi zawierać przynajmniej jedną:</br>dużą literę, małą literę, liczbę i znak specjalny!</div>";
+                    }
+                }
+            ?>
 
         </form>
     </div>

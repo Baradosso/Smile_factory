@@ -37,8 +37,28 @@
     </div>
 </section>
 <?php
+    if(isset($_GET["error"])){
+        if($_GET["error"] == "filetoobig"){
+            echo "<div class=\"bubble\">Za duży plik, maksymalnie 1.5GB (1536MB)!</div>";
+        }
+        else if($_GET["error"] == "failedupload"){
+            echo "<div class=\"bubble\">Coś poszło nie tak, spróbuj ponownie!</div>";
+        }
+        else if($_GET["error"] == "wrongext"){
+            echo "<div class=\"bubble\">Złe rozszerzenie, tylko pliki .zip!</div>";
+        }
+        else if($_GET["error"] == "stmtfailed"){
+            echo "<div class=\"bubble\">Coś poszło nie tak, spróbuj ponownie!</div>";
+        }
+        else if($_GET["error"] == "none"){
+            echo "<div class=\"bubble\">Udało Ci się załadować plik!</div>";
+        }
+    }
+?>
+<?php
     include_once '../../Footers/profile_footer.php';
 ?>
 
 <script src="../../Functions/js/filesList.js"></script>
+<script src="../../Functions/js/bubble.js"></script>
 

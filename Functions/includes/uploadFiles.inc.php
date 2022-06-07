@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
 	if(in_array($fileActualExt, $allowed)){
 		if($fileError === 0){
-			if($fileSize < 15728640){
+			if($fileSize < 1610612736){
 				$fileNameNew = uniqid('', true).".".$fileActualExt;
 				$fileDestination = "../../PlikiZip/".$fileNameNew;
 				move_uploaded_file($fileTmpName, $fileDestination);
