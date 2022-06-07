@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --ciemny_szary: rgb(10, 10, 10);
+    --sredni_szary: rgb(20, 20, 20);
+    --jasny_szary: rgb(30, 30, 30);
+    --b_jasny_szary: rgb(160, 160, 160);
+    --bialy: rgb(245, 245, 245);
+    --bg_hover: rgb(60, 60, 60);
+    --padding_glowny: 10%;
+    --gradient: linear-gradient(to left, #d53a9d, #743ad5);
+    --gradient_hover: linear-gradient(to left, #db84ba, #9c7ad6);
+    --radius_uslugi: 1rem;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.bg_image {
+    background: var(--gradient);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Nawigacja początek */
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    white-space: nowrap;
+    transition: 0.6s;
+    min-height: 8vh;
+    z-index: 10000;
+    margin: 0;
+    background-color: var(--ciemny_szary);
+    box-shadow: 0 6px 15px -2px #fff;
+}
+
+.nav-links {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    width: 60%;
+}
+
+    .nav-links li {
+        list-style: none;
+        margin: auto;
+    }
+
+        .nav-links li a {
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+            text-align: center;
+            text-decoration: none;
+            color: var(--bialy);
+            font-size: 1.3rem;
+            border-radius: 0.6em;
+            padding: 0.6em;
+            font-weight: 500;
+            transition: 0.6s;
+        }
+
+            .nav-links li a:hover {
+                background-color: var(--bg_hover);
+                transition: 0.6s;
+            }
+
+
+/* Logotyp */
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.02em;
+    color: var(--ciemny_szary);
+    font-weight: 500;
+    transition: 0.6s;
+}
+
+nav h1 {
+    color: var(--bialy);
+    transition: 0.6s;
+}
+/* /Logotyp */
+/* Nawigacja koniec */
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stopka */
+footer {
+    position: relative;
+    bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    padding-left: var(--padding_glowny);
+    padding-right: var(--padding_glowny);
+    background-color: var(--sredni_szary);
+}
+
+/* Kontakt */
+.contact {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact_inf {
+    color: var(--b_jasny_szary);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    white-space: nowrap;
+}
+
+    .contact_inf a {
+        color: var(--b_jasny_szary);
+        text-decoration: none;
+    }
+
+        .contact_inf a:hover {
+            color: var(--bialy);
+            transition: 0.3s;
+            text-decoration: underline;
+        }
+
+#regulamin {
+    margin-left: auto;
+    margin-right: 0;
+}
+/* /Kontakt */
+
+hr {
+    opacity: 0.6;
+}
+
+.copyright {
+    color: var(--bialy);
+    opacity: 0.6;
+    white-space: nowrap;
+}
+/* /Stopka */
+
+/* Burger */
+.burger {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    transition: 0.6s;
+    border-radius: 0.6em;
+    padding: 0.1em;
+    margin-left: 50%;
+    margin-right: auto;
+}
+
+    .burger div {
+        background-color: var(--bialy);
+        width: 1.5em;
+        height: 0.2rem;
+        margin: 0.4rem;
+    }
+/* /Burger */
+
+
+/* Regulamin PODSTRONA */
+h4 {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--bialy);
+    margin-bottom: 0.5rem;
+}
+
+.reg_page {
+    text-align: center;
+    position: relative;
+    min-height: 100%;
+    background: var(--jasny_szary);
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: var(--padding_glowny);
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+    .reg_page p {
+        font-size: 1rem;
+        color: var(--bialy);
+        line-height: 1.5em;
+        max-width: 80ch;
+        margin-bottom: 2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+/* /Regulamin PODSTRONA */
+
+/* FAQ PODSTRONA */
+h3 {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--bialy);
+    margin-bottom: 0.5em;
+}
+
+.reg_page ul li p, .reg_page ul li{
+    text-align: left;
+    margin-left: 0;
+}
+
+.reg_page ul li p a{
+    text-decoration: underline;
+    color: var(--bialy);
+}
+
+/* /FAQ PODSTRONA */
+
+/* log PODSTRONA */
+.sig_page {
+    text-align: center;
+    position: relative;
+    min-height: 100%;
+    background: var(--jasny_szary);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7rem;
+    margin-top: 12rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-radius: var(--radius_uslugi);
+}
+
+.signup {
+    text-align: left;
+    color: var(--bialy);
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.signup label, input{
+    margin-bottom: 0.6rem;
+}
+
+.signup input{
+    font-family: 'Poppins', sans-serif;
+    height: 2rem;
+    border-radius: 0.5em;
+    padding-left: 1rem;
+}
+
+.signup button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    width: 12rem;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 3em;
+    border-radius: 0.5em;
+}
+
+.signup button:hover{
+    background: var(--gradient);
+    color: var(--bialy);
+    transition: 0.6s;
+}
+
+.signup a{
+    text-align: center;
+    color: var(--bialy);
+    margin-top: 1rem;
+}
+
+.signup p{
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--bialy);
+    margin-top: 2rem;
+}
+/* /log PODSTRONA */
+
+/*---------------------------90em--------------------------------------*/
+@media screen and (max-width: 90em) {
+    /* Footer */
+    .contact_inf {
+        font-size: 1.3rem;
+    }
+    /* /Footer */
+}
+/*---------------------------90em--------------------------------------*/
+
+/*---------------------------70em--------------------------------------*/
+@media screen and (max-width: 70em) {
+
+    /* Nawigacja */
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-links {
+        right: 0;
+        position: absolute;
+        height: 92vh;
+        top: 100%;
+        background-color: var(--ciemny_szary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in;
+    }
+
+    .burger {
+        display: block;
+    }
+
+        .burger div {
+            transition: 0.6s;
+        }
+
+        .burger:hover {
+            background-color: var(--bg_hover);
+            transition: 0.6s;
+        }
+
+    nav {
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        background-color: var(--ciemny_szary);
+        box-shadow: 0 6px 15px -2px #fff;
+        transition: 0.6s;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+        .nav-links li a {
+            color: var(--bialy);
+            transition: 0.6s;
+        }
+
+            .nav-links li a:hover {
+                background-color: var(--bg_hover);
+                transition: 0.6s;
+            }
+
+    /* Logotyp */
+    .logo_nav {
+        text-align: center;
+        margin-left: 5%;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: var(--bialy);
+        transition: 0.6s;
+    }
+    /* /Logotyp */
+    /* /Nawigacja */
+
+    /* Regulamin PODSTRONA */
+    h4 {
+        font-size: 2.2rem;
+    }
+
+        .reg_page p {
+            font-size: 1rem;
+        }
+    /* /Regulamin PODSTRONA */
+
+    /* FAQ PODSTRONA */
+    h3 {
+        font-size: 1.8rem;
+    }
+    /* /FAQ PODSTRONA */
+
+    /* Footer */
+    .contact_inf {
+        font-size: 1.1rem;
+    }
+    /* /Footer */
+
+}
+/*---------------------------70em--------------------------------------*/
+
+/*---------------------------60em--------------------------------------*/
+@media screen and (max-width: 60em) {
+
+    /* Regulamin PODSTRONA */
+    h4 {
+        font-size: 2rem;
+    }
+
+        .reg_page p {
+            font-size: 0.9rem;
+        }
+    /* /Regulamin PODSTRONA */
+
+    /* FAQ PODSTRONA */
+    h3 {
+        font-size: 1.6rem;
+    }
+    /* /FAQ PODSTRONA */
+
+    /* Footer */
+    .contact_inf {
+        font-size: 1rem;
+    }
+    /* /Footer */
+}
+/*---------------------------60em--------------------------------------*/
+
+/*---------------------------50em--------------------------------------*/
+@media screen and (max-width: 50em) {
+
+    /* Regulamin PODSTRONA */
+    h4 {
+        font-size: 1.7rem;
+    }
+
+        .reg_page p {
+            font-size: 0.8rem;
+        }
+    /* /Regulamin PODSTRONA */
+
+    /* FAQ PODSTRONA */
+    h3 {
+        font-size: 1.4rem;
+    }
+    /* /FAQ PODSTRONA */
+
+    /* Footer */
+    .contact_inf {
+        font-size: 0.8rem;
+    }
+    /* /Footer */
+
+}
+/*---------------------------50em--------------------------------------*/
+
+/*---------------------------40em--------------------------------------*/
+@media screen and (max-width: 40em) {
+
+    /* Regulamin PODSTRONA */
+    h4 {
+        font-size: 1.4rem;
+    }
+
+        .reg_page p {
+            font-size: 0.7rem;
+        }
+    /* /Regulamin PODSTRONA */
+
+    /* FAQ PODSTRONA */
+    h3 {
+        font-size: 1.2rem;
+    }
+    /* /FAQ PODSTRONA */
+
+
+    /* Footer */
+    .contact_inf {
+        font-size: 0.6rem;
+        margin-right: 0.5rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+    /* /Footer */
+
+    .nav-links li a {
+        font-size: 1rem;
+    }
+
+    .reg_page {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+/*---------------------------40em--------------------------------------*/
+
+/*---------------------------30em--------------------------------------*/
+@media screen and (max-width: 30em) {
+
+    /* Footer */
+    footer {
+        position: relative;
+        bottom: 0;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact_inf {
+        font-size: 0.6rem;
+        margin-top: 0.5em;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 0.6rem;
+    }
+
+    #regulamin {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* /Footer */
+
+    .burger {
+        margin-left: auto;
+        right: 5%;
+    }
+}
+/*---------------------------30em--------------------------------------*/
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0em);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-7px, 7px);
+    transition: 0.6s;
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-7px, -7px);
+    transition: 0.6s;
+}
