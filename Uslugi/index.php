@@ -22,7 +22,7 @@
                     case 2:
                         echo '  <h2>Nagłośnienie i oświetlenie</h2>
                                 <div class="about_us">
-                                    <img src="../Functions/photos/services/image2_2.jpg" />
+                                    <img src="../Functions/photos/services/image2_2.JPG" />
                                     <p>
                                         Nagłaśnianie imprez to również nasza pasja, dzięki naszemu zapleczu sprzętowemu i doświadczeniu, zawsze dobierzemy coś do Państwa wymagań. 
                                         Oświetlenie to nasza pasja, nie tylko programujemy światła do własnej dyspozycji, ale opisujemy i projektujemy również kluby.  
