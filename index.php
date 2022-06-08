@@ -74,7 +74,7 @@
                     <?php
                         echo    '<a href="./Uslugi/?status=2" class="button_services">
                                     <h6>Nagłośnienie i Oświetlenie</h6>
-                                    <img src="./Functions/photos/services/image2.jpg" />
+                                    <img src="./Functions/photos/services/image2.JPG" />
                                 </a>';
                     ?>
                 </div>
